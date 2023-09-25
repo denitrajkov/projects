@@ -1,0 +1,45 @@
+@use '../css/abstracts/mixins' as mix;
+@use '../css/abstracts/variables' as var;
+@use 'sass:math';
+
+.Banner {
+    text-align: center;
+    background-image: url(https://images.pexels.com/photos/1287075/pexels-photo-1287075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    
+
+    .BannerText {
+        @extend %wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    
+
+
+    p {
+        text-transform: uppercase;
+    }
+
+    button {
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border-radius: 0;
+        border: 0;
+
+        @media (max-width: 424px) {
+            width: 100%
+        }
+    }
+}
